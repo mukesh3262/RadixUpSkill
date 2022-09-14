@@ -1,0 +1,17 @@
+button.btn.btn-primary.right {
+    float: right;
+}
+.card {
+    padding: 10px;
+}
+.text-danger{
+    width: 100%;
+    margin-top: 0.3rem;
+    font-size: 85%;
+    color: #ff3e1d;
+}
+
+.social_sign-up-option {
+    display: flex;
+    margin: 25px 0px 0px 274px;
+}
