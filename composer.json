@@ -15,7 +15,9 @@
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.0",
         "mailchimp/mailchimp": "^2.0",
-        "simplesoftwareio/simple-qrcode": "^4.2"
+        "simplesoftwareio/simple-qrcode": "^4.2",
+        "league/omnipay": "^3.0",
+        "omnipay/paypal": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.7",

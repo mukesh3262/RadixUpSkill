@@ -52,6 +52,12 @@
                     <div>Firebase Notification</div>
                 </a>
             </li>
+            <li class="menu-item {{ Request::segment(1) == 'paypal' ? 'active' : '' }}">
+                <a href="{{ url('paypal') }}" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-table"></i>
+                    <div>Paypal</div>
+                </a>
+            </li>
         @endif
     </ul>
 </aside>

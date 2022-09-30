@@ -9,7 +9,7 @@ use App\Http\Controllers\Employee\Auth\LoginController;
 use App\Http\Controllers\Auth\LoginController as  AuthLoginController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\NotificationController;
-
+use App\Http\Controllers\PaypalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +64,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/notification', [NotificationController::class, 'index'])->name('notification');
     Route::post('/save-token', [NotificationController::class, 'saveToken'])->name('save-token');
     Route::post('/send-notification', [NotificationController::class, 'sendNotification'])->name('send.notification');
+
+    //Paypal
+    Route::get('/paypal', [PaypalController::class, 'index'])->name('paypal');
+    Route::post('/checkout', [PaypalController::class, 'checkout'])->name('checkout.payment.paypal');
+    Route::get('/checkout/cancelled', [PaypalController::class, 'cancelled'])->name('paypal.checkout.cancelled');
+    Route::get('/checkout/completed', [PaypalController::class, 'completed'])->name('paypal.checkout.completed');
+    Route::get('/checkout/success', [PaypalController::class, 'success'])->name('paypal.checkout.success');
 
     //Demo Mail Route
     Route::get('/send-mail', [HomeController::class, 'sendMail']); // Demo
